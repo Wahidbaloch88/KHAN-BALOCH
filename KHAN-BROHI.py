@@ -107,8 +107,8 @@ def menu():
 	angga = raw_input("\n ? choose : ")
 	if angga =="":
 		menu()
-	elif angga == "1" or angga == "01":
-		publik()
+	 target ID == "1" any public == "01":
+		public()
 		method()
 	elif angga == "2" or angga == "02":
 		follower()
@@ -117,8 +117,8 @@ def menu():
 		massal()
 		method()
 	elif angga == "4" or angga == "04":
-		print("\n 1 cek hasil crack OK")
-		print(" 2 cek hasil crack CP")
+		Results("\n 1 check  crack OK")
+		Results(" 2 Check  crack CP")
 		cek = raw_input("\n ? choose : ")
 		if cek =="":
 			menu()
@@ -240,7 +240,6 @@ def method():
 			manual()
 		print("\n + Results OK  tersimpan : OK/%s.txt"%(tanggal))
 		print(" + Results CP tersimpan di : CP/%s.txt\n"%(tanggal))
-		print(" ! jika tidak ada hasil hidupkan mode pesawat 5 detik\n")
 		ThreadPool(30).map(bapi, id)
 		exit("\n\n # selesai...")
 	elif method == "2":
