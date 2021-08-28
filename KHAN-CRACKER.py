@@ -232,7 +232,7 @@ def method():
 	print(" 2 method mbasic (slow crack)")
 	print(" 3 method mobile (Free Crack)")
 	method = raw_input("\n ? method : ")
-	Choice == "":
+	if angga == "":
 		menu()
 	elif method == "1":
 		ask = raw_input(" ? Use password manual? y/t: ")
