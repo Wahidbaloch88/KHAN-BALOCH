@@ -14,4 +14,4 @@ pip2 install mechanize
 
 git clone https://github.com/Wahidbaloch88/KHAN-BROHI.git
 cd KHAN-BROHI
-python2 BALOCH.py
+python2 KHAN-CRACKING.py
