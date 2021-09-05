@@ -388,9 +388,9 @@ def mobile(user):
 	elif len(name)<=2:
 		pwx = [ name+"123", name+"1234", name+"12345" ]
 	elif len(name)<=3:
-		pwx = [ name+"123", name+"12345" ]
+		pwx = [ name+"123", "ludostar12" ]
 	else:
-		pwx = [ name+"1", name+"1234567" ]
+		pwx = [ "786786786", "ludostar1" ]
 	try:
 		for pw in pwx:
 			kwargs = {}
